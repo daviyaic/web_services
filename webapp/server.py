@@ -8,6 +8,7 @@ def get_db_connection():
     conn = psycopg2.connect(host='pg-13f37248-germinare-629e.g.aivencloud.com',
                             database='defaultdb',
                             user='avnadmin',
+                            port='17444',
                             password='AVNS_aO3d1bNC3QQ01jidvM5')
     return conn
 
@@ -44,4 +45,4 @@ def index():
     return open('index.html').read()  % (html)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=17444)
+    app.run(host="0.0.0.0", port=80)
